@@ -4,6 +4,8 @@ import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
 
+export const dyanmic = "force-dynamic";
+
 const getData = async (page, cat, editorChoice) => {
   const res = await fetch(
     `${process.env.NEXTAUTH_URL}/api/posts?page=${page || 1}&cat=${
