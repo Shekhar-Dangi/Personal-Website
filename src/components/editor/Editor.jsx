@@ -3,6 +3,9 @@ import React from "react";
 import MDEditor from "@uiw/react-md-editor";
 import styles from "./editor.module.css";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const Editor = ({ value, setValue, handleSubmit, title, setTitle, edit }) => {
   return (
     <>
