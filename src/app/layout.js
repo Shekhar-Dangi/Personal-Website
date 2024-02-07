@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
-import "/highlight/styles/default.css";
+import "../../public/highlight/styles/default.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import { ThemeContextProvider } from "@/context/ThemeContext";
