@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
+import "/highlight/styles/default.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 import { ThemeContextProvider } from "@/context/ThemeContext";
@@ -17,11 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="/highlight/styles/default.css" />
-        <script src="/highlight/highlight.min.js"></script>
-        <link rel="icon" href="/favicon.png" />
-      </head>
+      <head></head>
       <body className={inter.className}>
         <AuthProvider>
           <ThemeContextProvider>
