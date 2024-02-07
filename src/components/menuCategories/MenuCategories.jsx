@@ -33,6 +33,7 @@ const MenuCategories = async () => {
     <div className={styles.categoryList}>
       {data?.map((item) => (
         <Link
+          key={item._id}
           style={{ background: getRandomGradient() }}
           href={`/blog?cat=${item.slug}`}
           className={styles.categoryItem}

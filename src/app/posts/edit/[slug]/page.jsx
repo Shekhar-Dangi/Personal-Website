@@ -13,7 +13,7 @@ const fetcher = async (url) => {
   return data;
 };
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const { slug } = params;
   const router = useRouter();
   let [title, setTitle] = useState("");
@@ -75,4 +75,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
