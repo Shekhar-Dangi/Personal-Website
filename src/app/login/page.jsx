@@ -4,6 +4,9 @@ import styles from "./page.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const Page = () => {
   const { data, status } = useSession();
   const router = useRouter();
@@ -14,8 +17,6 @@ const Page = () => {
   if (status === "authenticated") {
     router.push("/");
   }
-
-  console.log(data, status);
   return (
     <div>
       <div className={styles.container}>

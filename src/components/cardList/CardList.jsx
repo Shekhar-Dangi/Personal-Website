@@ -4,7 +4,8 @@ import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
 
-export const dyanmic = "force-dynamic";
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 const getData = async (page, cat, editorChoice) => {
   const res = await fetch(
