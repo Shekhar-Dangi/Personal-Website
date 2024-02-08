@@ -5,7 +5,8 @@ import styles from "./comments.module.css";
 import Image from "next/image";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Script from "next/script";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -26,7 +27,7 @@ const Comments = ({ postSlug }) => {
     `/api/comments?postSlug=${postSlug}`,
     fetcher
   );
-
+  const [random, setRandom] = useState(1);
   const [desc, setDesc] = useState("");
 
   const handleSubmit = async () => {
@@ -37,6 +38,10 @@ const Comments = ({ postSlug }) => {
     setDesc("");
     mutate();
   };
+  useEffect(() => {
+    console.log("hello");
+    setRandom(() => random + 1);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -79,6 +84,8 @@ const Comments = ({ postSlug }) => {
               </div>
             ))}
       </div>
+
+      <Script data-r={random} src="/highlight/highlight.min.js" />
     </div>
   );
 };

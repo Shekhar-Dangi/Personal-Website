@@ -70,7 +70,6 @@ const SinglePage = async ({ params }) => {
           </div>
         </div>
         <Menu />
-        <Script src="/highlight/highlight.min.js" />
       </div>
     </div>
   );
