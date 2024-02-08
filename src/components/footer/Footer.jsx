@@ -28,18 +28,29 @@ const Footer = async () => {
           Physics & Mathematics since I believe that they are also connected.
         </p>
         <div className={styles.icons}>
-          <Image src="/github.png" alt="" width={18} height={18} />
-          <Image src="/youtube.png" alt="" width={18} height={18} />
-          <Image src="/linkedin.webp" alt="" width={26} height={26} />
+          <Link href="https://github.com/Shekhar-Dangi">
+            <Image src="/github.png" alt="github logo" width={18} height={18} />
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/shekhar-dangi-108b7b242/">
+            <Image
+              src="/linkedin.webp"
+              alt="linkedin logo"
+              width={26}
+              height={26}
+            />
+          </Link>
+          <Link href="https://twitter.com/shekhar__dangi">
+            <Image alt="x logo" src="/x.png" width={18} height={18} />
+          </Link>
         </div>
       </div>
       <div className={styles.links}>
         <div className={styles.list}>
           <span className={styles.listTitle}>Navigation</span>
           <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="mailto:dangishekhar3109@gmail.com">Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
@@ -51,10 +62,12 @@ const Footer = async () => {
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="/">Github</Link>
+          <Link href="https://github.com/Shekhar-Dangi">Github</Link>
           <Link href="/">Youtube</Link>
-          <Link href="/">LinkedIn</Link>
-          <Link href="/">X</Link>
+          <Link href="https://www.linkedin.com/in/shekhar-dangi-108b7b242">
+            LinkedIn
+          </Link>
+          <Link href="https://twitter.com/shekhar__dangi">X</Link>
         </div>
       </div>
     </div>

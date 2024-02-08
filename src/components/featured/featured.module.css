@@ -76,7 +76,9 @@
   .title {
     font-size: 64px;
   }
-
+  .post {
+    flex-direction: column;
+  }
   .imgContainer {
     display: none;
   }
