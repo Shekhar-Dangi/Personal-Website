@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
 import { Remarkable } from "remarkable";
+import Link from "next/link";
 
 const getData = async (page) => {
   const res = await fetch(
