@@ -4,8 +4,6 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-
-import { app } from "@/utils/firebase";
 import Editor from "@/components/editor/Editor";
 
 export const dynamic = "force-dynamic";
@@ -44,7 +42,6 @@ const WritePage = () => {
       body: JSON.stringify({
         title,
         desc: value,
-        img: media,
         slug: slugify(title),
         catSlug: catSlug || "style", //If not selected, choose the general category
       }),
