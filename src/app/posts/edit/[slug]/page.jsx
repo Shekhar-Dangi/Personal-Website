@@ -18,27 +18,21 @@ const Page = ({ params }) => {
   const router = useRouter();
   let [title, setTitle] = useState("");
   let [value, setValue] = useState("");
-  const { data, mutate, isLoading } = useSWR(
-    `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/posts/${slug}`,
-    fetcher
-  );
+  const { data, mutate, isLoading } = useSWR(`/api/posts/${slug}`, fetcher);
   const handleSubmit = async (updatedData) => {
     try {
       console.log(slug);
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}/api/posts/${slug}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: title,
-            desc: value,
-            slug: slug,
-          }),
-        }
-      );
+      const response = await fetch(`/api/posts/${slug}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: title,
+          desc: value,
+          slug: slug,
+        }),
+      });
 
       if (response.ok) {
         const updatedPost = await response.json();
