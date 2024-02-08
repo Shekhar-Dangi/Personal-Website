@@ -45,7 +45,9 @@ const Featured = async (page) => {
             }}
             className={styles.postDesc}
           ></p>
-          <button className={styles.button}>Read More</button>
+          <Link href={`/posts/${posts[0]?.slug}`}>
+            <button className={styles.button}>Read More</button>{" "}
+          </Link>
         </div>
       </div>
     </div>
