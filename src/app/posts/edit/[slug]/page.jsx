@@ -19,7 +19,7 @@ const Page = ({ params }) => {
   let [title, setTitle] = useState("");
   let [value, setValue] = useState("");
   const { data, mutate, isLoading } = useSWR(
-    `${_PUBLIC_NEXTAUTH_URL}/api/posts/${slug}`,
+    `${process.env.PUBLIC_NEXTAUTH_URL}/api/posts/${slug}`,
     fetcher
   );
   const handleSubmit = async (updatedData) => {
