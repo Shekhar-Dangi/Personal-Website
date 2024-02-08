@@ -7,6 +7,7 @@ import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import Script from "next/script";
+import hljs from "../../../public/highlight/highlight";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -39,8 +40,10 @@ const Comments = ({ postSlug }) => {
     mutate();
   };
   useEffect(() => {
-    console.log("hello");
     setRandom(() => random + 1);
+    console.log("Random");
+    hljs.highlightAll();
+    <Script src="/run.js" />;
   }, []);
 
   return (
